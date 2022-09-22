@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Poppins & Raleway Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Flickity  -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS JS  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Bootstrap 5.2-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <!-- Full Page JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.css"
+        integrity="sha512-NGRhMiWY9pf5z8PLens7/u+LLwIPAu1dhJ7u9sHRWIo8TKrVbKiWlRdYRH3pVDCZA10zmobo+PBLGeLOREklBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-transparent fixed-top">
+        <div class="container nav-edit shadow-lg">
+            <a class="navbar-brand" href="#"><span>canvas.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <i class="fa-solid fa-house d-lg-none d-block"></i>
+                        <a class="nav-link nav-link-hover" aria-current="page" href="#">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa-solid fa-list-ul d-lg-none d-block"></i>
+                        <a class="nav-link nav-link-hover" href="#">DANH SÁCH</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <i class="fa-solid fa-filter d-lg-none d-block"></i>
+                        <a class="nav-link nav-link-hover dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            KHU VỰC
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="navbar-search">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm...">
+                    <a href="#">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
+                <!-- <div class="dropdown navbar-account">
+                    <a class="" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <li><a class="dropdown-item" href="#">Login</a></li>
+                        <li><a class="dropdown-item" href="#">Register</a></li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+    <div id="fullpage">
+        <div class="section s1">
+            <div class="carousel" data-flickity="">
+                <div class="carousel-cell">
+                    <div class="carousel-cell-content">
+                        <h4>Đại Học Swinburne</h4>
+                        <span>Đại học Công nghệ Swinburne Việt Nam là trường đại học quốc tế ở Hà Nội xếp hạng 321 đại
+                            học tốt nhất thế giới theo QS Ranking 2021.</span>
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <div class="carousel-cell-content">
+                        <h4>Đại Học Swinburne</h4>
+                        <span>Đại học Công nghệ Swinburne Việt Nam là trường đại học quốc tế ở Hà Nội xếp hạng 321 đại
+                            học tốt nhất thế giới theo QS Ranking 2021.</span>
+                    </div>
+                </div>
+                <div class="carousel-cell">
+                    <div class="carousel-cell-content">
+                        <h4>Đại Học Swinburne</h4>
+                        <span>Đại học Công nghệ Swinburne Việt Nam là trường đại học quốc tế ở Hà Nội xếp hạng 321 đại
+                            học tốt nhất thế giới theo QS Ranking 2021.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section s2">
+            <div class="container">
+                <h3 class="section-title">KHU VỰC</h3>
+
+            </div>
+        </div>
+        <div class="section s3">
+            <div class="container">
+                <h3 class="section-title">Featured</h3>
+
+            </div>
+
+        </div>
+        <div class="section s4">
+            <div class="container">
+                <h3 class="section-title">Team</h3>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Flickity  -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- Ionicons  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- AOS JS  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false
+        });
+    </script>
+    <!-- Full Page JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js"
+        integrity="sha512-ojnoeSkK5NDwnuW5S0ZnddobHez8Bx1yVa3RE+Cd0fGEuY/NEd4sgVF/CJ6eDtnOeLZLbTJpNFrCkUYbHS2hRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap 5.2-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/fullpage.js"></script>
+</body>
+
+</html>
