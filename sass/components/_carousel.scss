@@ -10,17 +10,17 @@
         position: relative;
 
         &:first-child {
-            background: url('../../img/background3.jpg');
+            background: url('../img/background3.jpg');
             @include setBackgroundPosition;
         }
 
         &:nth-child(2) {
-            background: url('../../img/background2.jpg');
+            background: url('../img/background2.jpg');
             @include setBackgroundPosition;
         }
 
         &:last-child {
-            background: url('../../img/background1.jpg');
+            background: url('../img/background1.jpg');
             @include setBackgroundPosition;
         }
 

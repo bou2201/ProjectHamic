@@ -250,21 +250,21 @@ body {
   position: relative;
 }
 .carousel-cell:first-child {
-  background: url("../../img/background3.jpg");
+  background: url("../img/background3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 .carousel-cell:nth-child(2) {
-  background: url("../../img/background2.jpg");
+  background: url("../img/background2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 .carousel-cell:last-child {
-  background: url("../../img/background1.jpg");
+  background: url("../img/background1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
