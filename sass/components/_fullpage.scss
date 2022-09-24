@@ -15,8 +15,7 @@
     .s2,
     .s3,
     .s4 {
-        background-color: $primary-color;
-        opacity: 0.9;
+        background-color: $background-color;
     }
 
     .section {
@@ -32,6 +31,7 @@
             justify-content: flex-start;
             align-items: center;
             gap: 20px;
+            font-weight: bold;
 
             &::before {
                 content: '';
@@ -44,7 +44,8 @@
         }
 
         &:not(:first-child) {
-            padding-top: 120px;
+            padding-top: 110px;
+
             @include responsive(max_lg) {
                 padding-top: 30px;
             }
@@ -77,6 +78,6 @@
     top: -5px;
 }
 
-.fp-is-overflow > .fp-overflow {
+.fp-is-overflow>.fp-overflow {
     overflow-y: hidden;
 }

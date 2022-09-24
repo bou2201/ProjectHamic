@@ -1,101 +1,164 @@
-.carousel {
-    background: #000000;
-    opacity: 0.9;
+.s1 {
+    .carousel {
+        background: #000000;
+        opacity: 0.9;
 
-    &-cell {
+        &-cell {
+            width: 100%;
+            height: 100vh;
+            margin-right: 10px;
+            border-radius: 5px;
+            position: relative;
+
+            &:first-child {
+                background: url('../img/background3.jpg');
+                @include setBackgroundPosition;
+            }
+
+            &:nth-child(2) {
+                background: url('../img/background2.jpg');
+                @include setBackgroundPosition;
+            }
+
+            &:last-child {
+                background: url('../img/background1.jpg');
+                @include setBackgroundPosition;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.4);
+                background-image: linear-gradient(0deg, rgba(0, 0, 0, .8) 0, transparent 60%, rgba(0, 0, 0, .8));
+            }
+
+            &-content {
+                position: absolute;
+                width: 500px;
+                left: 50%;
+                bottom: 20px;
+                transform: translate(-50%, -50%);
+                margin: 0 auto;
+                font-family: $secondary-font;
+
+                @include responsive(max_md) {
+                    width: 100%;
+                    padding: 0 40px;
+                }
+
+                h4 {
+                    text-align: center;
+                    margin-bottom: 30px;
+                    font-weight: bold;
+                }
+
+                span {
+                    text-align: center;
+                    display: block;
+                    font-size: 14px;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    .flickity-page-dots {
+        position: absolute;
         width: 100%;
-        height: 100vh;
-        margin-right: 10px;
-        border-radius: 5px;
-        position: relative;
+        bottom: 15px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+        line-height: 1;
 
-        &:first-child {
-            background: url('../img/background3.jpg');
-            @include setBackgroundPosition;
-        }
-
-        &:nth-child(2) {
-            background: url('../img/background2.jpg');
-            @include setBackgroundPosition;
-        }
-
-        &:last-child {
-            background: url('../img/background1.jpg');
-            @include setBackgroundPosition;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.4);
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, .8) 0, transparent 60%, rgba(0, 0, 0, .8));
-        }
-
-        &-content {
-            position: absolute;
-            width: 500px;
-            left: 50%;
-            bottom: 20px;
-            transform: translate(-50%, -50%);
-            margin: 0 auto;
-            font-family: $secondary-font;
-            @include responsive(max_md) {
-                width: 100%;
-                padding: 0 40px;
-            }
-
-            h4 {
-                text-align: center;
-                margin-bottom: 30px;
-                font-weight: bold;
-            }
-
-            span {
-                text-align: center;
-                display: block;
-                font-size: 14px;
-                opacity: 0.7;
-            }
+        .dot {
+            background-color: #fff;
         }
     }
-}
 
-.flickity-page-dots {
-    position: absolute;
-    width: 100%;
-    bottom: 15px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-    line-height: 1;
+    .flickity-prev-next-button.previous {
+        left: 100px;
 
-    .dot {
-        background-color: #fff;
+        @include responsive(max_lg) {
+            left: 10px;
+        }
     }
-}
 
-.flickity-prev-next-button.previous {
-    left: 100px;
+    .flickity-prev-next-button.next {
+        right: 100px;
 
-    @include responsive(max_lg) {
-        left: 10px;
+        @include responsive(max_lg) {
+            right: 10px;
+        }
     }
-}
 
-.flickity-prev-next-button.next {
-    right: 100px;
-
-    @include responsive(max_lg) {
-        right: 10px;
-    }
 }
 
 .flickity-prev-next-button {
     width: 40px;
     height: 40px;
+}
+
+.s3 {
+    .section-title {
+        margin-bottom: 50px;
+    }
+
+    .carousel {
+        background: $background-color;
+
+        &-cell {
+            width: 410px;
+            height: 500px;
+            margin-right: 20px;
+            border-radius: 5px;
+            background-color: $card-background-color;
+            border-radius: 30px;
+            position: relative;
+
+            @include responsive(max_lg) {
+                width: 300px;
+            }
+        }
+    }
+
+    .flickity-viewport {
+        height: 550px !important;
+    }
+
+    .flickity-page-dots {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+        line-height: 1;
+
+        .dot {
+            background-color: #fff;
+        }
+    }
+
+    .flickity-prev-next-button.previous {
+        left: -40px;
+
+        @media (max-width: 1400px) {
+            left: 0;
+        }
+    }
+
+    .flickity-prev-next-button.next {
+        right: -40px;
+
+        @media (max-width: 1400px) {
+            right: 0;
+        }
+    }
 }

@@ -1,8 +1,19 @@
 .navbar {
+    --bs-navbar-padding-y: 0;
     .nav-edit {
-        box-shadow: 0 2px 25px -5px rgba(0, 0, 0, .16), 0 25px 21px -5px rgba(0, 0, 0, .1) !important;
         padding: 10px 20px;
-        margin-top: 10px;
+        margin-top: 20px;
+        background-color: rgb(41, 41, 51, 0.8);
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+                    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+                    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        @include responsive(max_sm) {
+            margin-top: 0;
+        }
     }
 
     .navbar-toggler {
