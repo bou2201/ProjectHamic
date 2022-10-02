@@ -4,7 +4,6 @@ new fullpage("#fullpage", {
   // scrollBar: true,
   navigation: true,
   navigationTooltips: ["Nổi Bật", "Danh Sách", "Top", "Team"],
-  // showActiveTooltip: true,
   responsiveWidth: 992,
   scrollingSpeed: 700,
   afterLoad: () => {
@@ -13,5 +12,5 @@ new fullpage("#fullpage", {
       .forEach((element) => {
         element.classList.add("aos-animate");
       });
-  }
+  },
 });
