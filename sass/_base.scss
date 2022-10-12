@@ -4,5 +4,6 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: $third-font;
+    scroll-behavior: smooth;
 }

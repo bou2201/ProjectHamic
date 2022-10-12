@@ -50,6 +50,12 @@
                 padding-top: 30px;
             }
         }
+
+        &:last-child {
+            @include responsive(max_lg) {
+                padding-top: 40px;
+            }
+        }
     }
 }
 
