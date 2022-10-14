@@ -1,0 +1,94 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: $background-color;
+
+    &-top {
+        h5 {
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -15px;
+                width: 50px;
+                height: 3.5px;
+                border-radius: 10px;
+                @include backgroundGradient;
+            }
+        }
+
+        ul {
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 1.5rem;
+
+            li {
+                list-style: none;
+
+                a {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    @include backgroundGradient;
+                    transition: all 0.3s linear;
+
+                    &:hover {
+                        transform: translateY(-10px);
+                    }
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        padding: 16px;
+        background-color: $primary-color;
+
+        p {
+            margin-bottom: 0;
+            opacity: 0.6;
+            font-size: 14px;
+        }
+    }
+}
+
+.footer-detail-page {
+    padding-top: 50px;
+    position: unset;
+    bottom: unset;
+    left: unset;
+    transform: unset;
+
+    @include responsive(max_xl) {
+        padding-top: 70px;
+    }
+
+    @include responsive(max_lg) {
+        padding-top: 10px;
+    }
+}
+
+.footer-list-page {
+    padding-top: 60px;
+    position: unset;
+    bottom: unset;
+    left: unset;
+    transform: unset;
+}
