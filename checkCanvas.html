@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <canvas id="canvas" width="1280" height="986px">
+            img test
+        </canvas>
+
+
+    <script>    
+        var canvas = document.getElementById("canvas");
+        var ctx= canvas.getContext("2d");
+        var imgSchool = new Image()
+    
+        imgSchool.src = "./img/BK.jpg";
+                
+        function draw() {
+            resizeCanvas();
+            drawImageScaled(imgSchool,ctx);
+        }
+
+        imgSchool.onload = draw;
+    
+        canvas.addEventListener('click', function(){
+            alert("hello");
+        });
+        
+        function drawImageScaled(img, ctx) {
+            var canvas = ctx.canvas ;
+            var hRatio = canvas.width  / img.width    ;
+            var vRatio =  canvas.height / img.height  ;
+            var ratio  = Math.min ( hRatio, vRatio );
+            var centerShift_x = ( canvas.width - img.width*ratio ) / 2;
+            var centerShift_y = ( canvas.height - img.height*ratio ) / 2;  
+            ctx.clearRect(0,0,canvas.width, canvas.height);
+            ctx.drawImage(img, 0,0, img.width, img.height,
+                               centerShift_x,centerShift_y,img.width*ratio, img.height*ratio);  
+        }
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+    </script>
+</body>
+</html>
