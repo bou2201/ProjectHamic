@@ -1,0 +1,43 @@
+create database Wcontest
+
+use Wcontest
+
+create table admin(
+	username char(50) NOT NULL,
+	password char(50) NOT NULL
+)
+
+use Wcontest
+
+insert into admin (username,password) values ('admin123','admin123');
+
+create table universitys(
+	uni_id int NOT NULL,
+	name char(200),
+)
+
+create table special_location(
+	s_location varchar(1000)
+	uni_id int
+)
+
+create table other_location(
+	school_yard char(100)
+	class_room char(100)
+	research_room char(100)
+	elevator char(100)
+	uni_id int
+)
+
+create table info_other_location(
+	school_yard varchar(10000)
+	class_room varchar(10000)
+	research_room varchar(10000)
+	elevator varchar(10000)
+	uni_id int
+)
+
+create table special_image_path(
+	s_location char(100)
+	path varchar(500)
+)
