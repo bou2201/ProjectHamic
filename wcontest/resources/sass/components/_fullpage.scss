@@ -1,0 +1,89 @@
+#fullpage {
+    .s1 {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, .8) 0, transparent 60%, rgba(0, 0, 0, .8));
+        }
+    }
+
+    .s2,
+    .s3,
+    .s4 {
+        background-color: $background-color;
+    }
+
+    .section {
+        color: #fff;
+
+        .container {
+            padding: 0 20px;
+        }
+
+        &-title {
+            font-family: $third-font;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            font-weight: bold;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 10px;
+                height: 30px;
+                border-radius: 4px;
+                @include backgroundGradient;
+            }
+        }
+
+        &:not(:first-child) {
+            padding-top: 110px;
+
+            @include responsive(max_lg) {
+                padding-top: 30px;
+            }
+        }
+
+        &:last-child {
+            @include responsive(max_lg) {
+                padding-top: 40px;
+            }
+        }
+    }
+}
+
+// Custome FullPageJs
+.fp-watermark {
+    display: none;
+}
+
+.fp-table {
+    justify-content: flex-start;
+}
+
+#fp-nav ul li a span {
+    background-color: $secondary-color;
+}
+
+.fp-is-overflow>.fp-overflow {
+    overflow-y: unset;
+}
+
+#fp-nav ul li .fp-tooltip.fp-right {
+    right: 25px;
+}
+
+#fp-nav ul li .fp-tooltip {
+    top: -5px;
+}
+
+.fp-is-overflow>.fp-overflow {
+    overflow-y: hidden;
+}
